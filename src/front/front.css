@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .wffbutton {
+    background-color: red;
+    color: white;
+    padding: 5px 25px 2px 25px;
+    border: none;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+.wffbutton-content {
+    display: flex;
+    font-size: 16px;
+} */
