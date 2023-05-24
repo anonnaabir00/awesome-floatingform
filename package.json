@@ -1,18 +1,29 @@
 {
   "name": "wp-floatingform",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "watch": "vite build --watch"
   },
   "dependencies": {
-    "vue": "^3.2.47"
+    "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
+    "lightvue": "^0.5.1",
+    "postcss-nested": "^5.0.6",
+    "vue-router": "^3.6.5",
+    "vuesax": "^4.0.1-alpha.25"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.1.0",
-    "vite": "^4.3.2"
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "@wordpress/scripts": "^24.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.2",
+    "vue": "^2.7.10"
   }
 }
