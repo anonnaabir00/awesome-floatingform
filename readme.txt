@@ -29,3 +29,9 @@ If you are looking for a way to make it easy for visitors to contact you, then W
 ====
 
 Initial Release
+
+1.1
+====
+
+- Style Updated
+- Bug Fixed

@@ -3,7 +3,7 @@
  * Plugin Name:       WP Floating Form
  * Plugin URI:        https://stacksamurai.com/
  * Description:       Simple floating form plugin for WordPress.
- * Version:           1.0
+ * Version:           1.1
  * Requires at least: 4.6
  * Requires PHP:      7.2
  * Tested up to:      6.2.2
