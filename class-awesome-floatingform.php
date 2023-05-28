@@ -1,9 +1,9 @@
 <?php
 /*
  * Plugin Name:       Awesome Floating Form
- * Plugin URI:        https://stacksamurai.com/
+ * Plugin URI:        https://stacksamurai.com/awesome-floatingform
  * Description:       Simple floating form plugin for WordPress.
- * Version:           1.1
+ * Version:           1.2
  * Requires at least: 4.6
  * Requires PHP:      7.2
  * Tested up to:      6.2.2
