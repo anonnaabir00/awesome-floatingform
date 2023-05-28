@@ -1,7 +1,7 @@
 <template>
     <div class="w-3/6 mx-auto mt-20 mb-4 bg-white shadow-md">
   <div class="w-full max-w-7xl mx-auto p-16">
-    <h1 class="text-3xl font-semibold mb-8">WP Floating Form</h1>
+    <h1 class="text-3xl font-semibold mb-8">Awesome Floating Form</h1>
 
       <div class="mb-8 w-4/6">
         <lv-input id="contacttext" class="focus:!outline-none" type="text" v-model="contacttext" label="Contact Button Text" placeholder="Contact Us" bottom-bar />
@@ -55,7 +55,7 @@ export default({
   },
     methods: {
         saveSettings(){
-            var url = wff_settings.root + 'wp-floatingform/v1/settings/save';
+            var url = wff_settings.root + 'awesome-floatingform/v1/settings/save';
             axios({
             method: 'post',
             url: url,

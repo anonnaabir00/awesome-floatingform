@@ -37,7 +37,7 @@
             <div class="ml-2">{{ submittext }}</div>
         </div>
     </button>
-    <p class="text-center text-xs text-gray-400 mt-5">Powered By <span class="font-bold">WP Floating Form</span></p>
+    <p class="text-center text-xs text-gray-400 mt-5">Powered By <span class="font-bold">Awesome Floating Form</span></p>
 </div>
 
       </vs-dialog>
@@ -97,7 +97,7 @@ export default {
           
           axios({
               method: 'post',
-              url: '/wp-json/wp-floatingform/v1/email',
+              url: '/wp-json/awesome-floatingform/v1/email',
               data: {
                   email: this.name,
                   subject: this.email,

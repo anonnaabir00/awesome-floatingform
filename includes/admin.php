@@ -1,6 +1,6 @@
 <?php
 
-    class WP_FloatingForm_Admin {
+    class Awesome_FloatingForm_Admin {
         // create static instance
 
         private static $instance = false;
@@ -13,17 +13,17 @@
 
         // constructor
         public function __construct() {
-            add_action('admin_menu', array( $this,'wp_floatingform_admin_menu'));
-            add_action('admin_enqueue_scripts', array( $this,'wp_floatingform_admin_scripts'));
+            add_action('admin_menu', array( $this,'awesome_floatingform_admin_menu'));
+            add_action('admin_enqueue_scripts', array( $this,'awesome_floatingform_admin_scripts'));
             add_filter( 'script_loader_tag', array( $this,'add_module_attribute'), 10,3 );
-            add_action( 'rest_api_init', array( $this, 'wp_floatingform_settings' ));
+            add_action( 'rest_api_init', array( $this, 'awesome_floatingform_settings' ));
         }
 
 
-        public function wp_floatingform_admin_scripts() {
+        public function awesome_floatingform_admin_scripts() {
             $current_screen = get_current_screen();
-            $screen = 'toplevel_page_wp_floatingform_options';
-            $settings = get_option( 'wp_floatingform_settings' );
+            $screen = 'toplevel_page_awesome_floatingform_options';
+            $settings = get_option( 'awesome_floatingform_settings' );
 
             if ($screen == $current_screen->base) {
                 wp_enqueue_style( 'front', plugin_dir_url( __FILE__ ) . '../assets/front.css' );
@@ -52,37 +52,37 @@
         return $tag;
     }
 
-        public function wp_floatingform_admin_menu() {
-            $page_title = 'WP Floating Form';
-            $menu_title = 'WP Floating Form';
+        public function awesome_floatingform_admin_menu() {
+            $page_title = 'Awesome Floating Form';
+            $menu_title = 'Awesome Floating Form';
             $capability = 'manage_options';
-            $slug = 'wp_floatingform_options';
+            $slug = 'awesome_floatingform_options';
             $icon_url =  get_template_directory_uri() . '/lib/icon.svg';
             
-            add_menu_page(__( $page_title, WP_FLOATINGFORM_TEXTDOMAIN ),$menu_title,$capability,$slug,array( $this,'wp_floatingform_settings_contents'),$icon_url, 99);
+            add_menu_page(__( $page_title, AWESOME_FLOATINGFORM_TEXTDOMAIN ),$menu_title,$capability,$slug,array( $this,'awesome_floatingform_settings_contents'),$icon_url, 99);
 
         }
     
-        public function wp_floatingform_settings_contents() {
+        public function awesome_floatingform_settings_contents() {
             ?>
             <div id="wff-admin"></div>
             <?php
         }
 
-        public function wp_floatingform_settings() {
-            register_rest_route( 'wp-floatingform/v1', '/settings/save', array(
+        public function awesome_floatingform_settings() {
+            register_rest_route( 'awesome-floatingform/v1', '/settings/save', array(
                 'methods' => 'POST',
-                'callback' => array( $this, 'wp_floatingform_set_settings_callback' ),
+                'callback' => array( $this, 'awesome_floatingform_set_settings_callback' ),
             ));
         }
 
-        public function wp_floatingform_set_settings_callback(WP_REST_Request $request){
+        public function awesome_floatingform_set_settings_callback(WP_REST_Request $request){
             $value = json_decode($request->get_body());
-            update_option( 'wp_floatingform_settings', $value );
+            update_option( 'awesome_floatingform_settings', $value );
             return $value;
         }
 
     }
 
     // initiate instance
-    WP_FloatingForm_Admin::get_instance();
+    Awesome_FloatingForm_Admin::get_instance();
