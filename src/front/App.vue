@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="fixed left-10 bottom-10">
+        <div :class="buttonposition" class="fixed">
 
-      <button @click="active=!active" :style="contactstyle" class="p-3 bg-blue-600 text-white text-base hover:bg-blue-600 font-bold py-2 px-4 rounded transition duration-300 transform hover:scale-105 shadow-md animate__animated animate__swing animate__slow animate__infinite">
+      <button @click="active=!active" :style="contactstyle" :class="buttonanimation" class="p-3 bg-blue-600 text-white text-base hover:bg-blue-600 font-bold py-2 px-4 rounded transition duration-300 transform hover:scale-105 shadow-md animate__animated animate__slow animate__infinite">
         <div class="flex">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
@@ -14,19 +14,19 @@
       <vs-dialog not-padding v-model="active">
         <div class="p-10">
             <div class="mb-6">
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ namelabel }}</label>
             <input v-model="name" type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Jhon Doe" required>
         </div>
             <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ emaillabel }}</label>
             <input v-model="email" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="hello@example.com" required>
         </div>
         <div class="mb-6">
-            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Phone</label>
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ phonelabel }}</label>
             <input v-model="phone" type="text" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="+14803229794">
         </div>
         <div class="mb-6">
-    <label for="msg" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Messege</label>
+    <label for="msg" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ messegelabel }}</label>
     <textarea v-model="msg" id="msg" class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
 </div>
         <button @click="sendMsg" :style="submitstyle" class="w-full p-3 bg-blue-600 text-white text-base hover:bg-blue-600 font-bold py-2 px-4 rounded transition duration-300 transform hover:scale-105 shadow-md">
@@ -37,7 +37,7 @@
             <div class="ml-2">{{ submittext }}</div>
         </div>
     </button>
-    <p class="text-center text-xs text-gray-400 mt-5">Powered By <span class="font-bold">Awesome Floating Form</span></p>
+    <p class="text-center text-xs text-gray-400 mt-5">{{ footertext }}</p>
 </div>
 
       </vs-dialog>
@@ -63,14 +63,24 @@ export default {
         email: null,
         phone: null,
         msg: null,
-        contacttext: wff_settings.contact_button_text,
-        submittext: wff_settings.submit_button_text,
+        settings: affpro_settings.settings,
+        contacttext: affpro_settings.settings.contacttext,
+        submittext: affpro_settings.settings.submittext,
+        buttonposition: affpro_settings.settings.contactposition.value,
+        buttonanimation: affpro_settings.settings.contactanimation.value,
         contactstyle: {
-            backgroundColor: wff_settings.contact_button_color,
+            backgroundColor: affpro_settings.settings.contactbgcolor,
+            color: affpro_settings.settings.contacttextcolor,
         },
         submitstyle: {
-            backgroundColor: wff_settings.submit_button_color,
+            backgroundColor: affpro_settings.settings.submitbgcolor,
+            color: affpro_settings.settings.submittextcolor,
         },
+        footertext: affpro_settings.settings.footertext,
+        namelabel: affpro_settings.settings.namelabel,
+        emaillabel: affpro_settings.settings.emaillabel,
+        phonelabel: affpro_settings.settings.phonelabel,
+        messegelabel: affpro_settings.settings.messegelabel,
       }),
         methods: {
             sendMsg() {
@@ -97,7 +107,7 @@ export default {
           
           axios({
               method: 'post',
-              url: '/wp-json/awesome-floatingform/v1/email',
+              url: '/wp-json/awesome-floatingform-pro/v1/email',
               data: {
                   email: this.name,
                   subject: this.email,
@@ -123,7 +133,7 @@ export default {
       }
         },
         mounted() {
-            // this.get();
+            console.log(this.settings);
         }
 
 }

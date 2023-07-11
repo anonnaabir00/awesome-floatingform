@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import App from './App.vue';
 
-document.body.innerHTML += '<div id="wff-app"></div>';
+document.body.innerHTML += '<div id="affpro-app"></div>';
 
 new Vue({
-    el: '#wff-app',
+    el: '#affpro-app',
     render: h => h(App),
     // components: { App }
 });

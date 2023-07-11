@@ -12,7 +12,7 @@ export default defineConfig({
       rollupOptions: {
         input: {
         'admin': path.resolve(__dirname, 'src/admin/admin.js'),
-        'wffmain': path.resolve(__dirname, 'src/front/main.js'),
+        'affpro': path.resolve(__dirname, 'src/front/main.js'),
         'front': path.resolve(__dirname, 'src/front/front.css'),
         },
 
