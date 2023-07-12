@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'anonnaabir/awesome-floatingform',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '568cf78e2f3b24f3ce23e92972776833d539be62',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'anonnaabir/awesome-floatingform' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '568cf78e2f3b24f3ce23e92972776833d539be62',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'pluggable/marketing' => array(
+            'pretty_version' => '0.2.1',
+            'version' => '0.2.1.0',
+            'reference' => '89680e59dd291e8a1d17b4d7dc1647ed506b7169',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pluggable/marketing',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'pluggable/plugin' => array(
+            'pretty_version' => '0.98.1',
+            'version' => '0.98.1.0',
+            'reference' => 'd156ae625e596e2877fc941ba9a7b21826a6a383',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pluggable/plugin',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

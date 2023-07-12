@@ -1,0 +1,111 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b07137a9a6b9698330b26aeb86df271d",
+    "packages": [
+        {
+            "name": "pluggable/marketing",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/pluggableio/marketing.git",
+                "reference": "89680e59dd291e8a1d17b4d7dc1647ed506b7169"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/pluggableio/marketing/get/89680e59dd291e8a1d17b4d7dc1647ed506b7169.zip",
+                "reference": "89680e59dd291e8a1d17b4d7dc1647ed506b7169",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pluggable",
+                    "email": "hi@pluggable.io",
+                    "homepage": "https://pluggable.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Marketing toolkit for Pluggable plugins",
+            "homepage": "https://bitbucket.org/pluggableio/marketing/",
+            "keywords": [
+                "marketing",
+                "pluggable"
+            ],
+            "support": {
+                "source": "https://bitbucket.org/pluggableio/marketing/src/89680e59dd291e8a1d17b4d7dc1647ed506b7169/?at=0.2.1"
+            },
+            "time": "2023-07-02T04:42:01+00:00"
+        },
+        {
+            "name": "pluggable/plugin",
+            "version": "0.98.1",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/pluggableio/plugin.git",
+                "reference": "d156ae625e596e2877fc941ba9a7b21826a6a383"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/pluggableio/plugin/get/d156ae625e596e2877fc941ba9a7b21826a6a383.zip",
+                "reference": "d156ae625e596e2877fc941ba9a7b21826a6a383",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pluggable",
+                    "email": "hi@pluggable.io",
+                    "homepage": "https://pluggable.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "License management toolkit for Pluggable plugins",
+            "homepage": "https://bitbucket.org/pluggableio/plugin/",
+            "keywords": [
+                "pluggable",
+                "plugin"
+            ],
+            "support": {
+                "source": "https://bitbucket.org/pluggableio/plugin/src/d156ae625e596e2877fc941ba9a7b21826a6a383/?at=0.98.1"
+            },
+            "time": "2023-05-22T02:55:22+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
