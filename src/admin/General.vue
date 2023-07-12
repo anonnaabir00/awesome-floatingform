@@ -83,7 +83,7 @@ export default({
         }
     },
     mounted() {
-      console.log(this.adminemail);
+      // console.log(this.adminemail);
    },
    watch: {
     adminemail(newVal) {

@@ -29,3 +29,11 @@ If you are looking for a way to make it easy for visitors to contact you, then A
 ====
 
 Initial Release
+
+
+1.1
+====
+
+- Default Values Bug Fixed
+- Version Number Updated
+- Readme Updated

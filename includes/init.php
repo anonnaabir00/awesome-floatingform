@@ -13,16 +13,15 @@
 
         // constructor
         public function __construct() {
+            // delete_option( 'awesome_floatingform_pro_settings' );
             require_once dirname( __FILE__ ) . '/admin.php';
-            
-            add_option( 'awesome_floatingform_pro_settings', '', '', 'yes' );
             add_action( 'wp_enqueue_scripts', array($this,'awesome_floatingform_assets'), 10, 1);
             add_action( 'rest_api_init', array( $this, 'awesome_floatingform_email' ));
             add_filter( 'script_loader_tag', array( $this,'add_module_attribute'), 10,3 );
         }
         
         public function awesome_floatingform_assets() {
-            $settings = get_option( 'awesome_floatingform_pro_settings' );
+            $settings = get_option('awesome_floatingform_pro_settings');
 
             wp_enqueue_style( 'front', plugin_dir_url( __FILE__ ) . '../assets/front.css', array(), '1.0', 'all' );
             wp_enqueue_style( 'main', plugin_dir_url( __FILE__ ) . '../assets/main.css', array(), '1.0', 'all' );
